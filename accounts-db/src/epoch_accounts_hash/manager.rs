@@ -95,7 +95,7 @@ enum State {
     /// include an EAH, or when starting from genesis (before an EAH calculation is requested).
     Invalid,
     /// An EAH calculation has been requested (for `Slot`) and is in flight.  The Bank that should
-    /// save the EAH must wait until the calculation has completed.
+    /// save the EAH must wait until the calculation has been completed.
     InFlight(Slot),
     /// The EAH calculation is complete (for `Slot`) and the EAH value is valid to read/use.
     Valid(EpochAccountsHash, Slot),
