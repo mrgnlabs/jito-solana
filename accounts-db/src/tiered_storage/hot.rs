@@ -137,7 +137,7 @@ impl TieredAccountMeta for HotAccountMeta {
 
     /// Returns the epoch that this account will next owe rent by parsing
     /// the specified account block.  None will be returned if this account
-    /// does not persist this optional field.
+    /// does not persist in this optional field.
     fn rent_epoch(&self, account_block: &[u8]) -> Option<Epoch> {
         self.flags()
             .has_rent_epoch()
@@ -150,7 +150,7 @@ impl TieredAccountMeta for HotAccountMeta {
     }
 
     /// Returns the account hash by parsing the specified account block.  None
-    /// will be returned if this account does not persist this optional field.
+    /// will be returned if this account does not persist in this optional field.
     fn account_hash<'a>(&self, account_block: &'a [u8]) -> Option<&'a Hash> {
         self.flags()
             .has_account_hash()
